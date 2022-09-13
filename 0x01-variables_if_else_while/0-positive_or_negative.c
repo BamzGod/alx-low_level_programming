@@ -1,17 +1,22 @@
+#include <stdlibh>
+#include <time.h>
 #include <stdio.h>
 /**
- *main - prints the alphabet in lowercase,
- *followed by a new line
+ *main- assigns a random number to int n everytime.
+ *it executes, and prints it
  *Return: Always 0 (Success)
  */
 int main(void)
 {
-	char ch;
+	int n;
 
-	for (ch = 'a'; ch <= 'z'; ch++)
-	{
-		putchar(ch);
-	}
-	putchar('\n');
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	if (n > 0)
+		printf("%d is positive\n", n);
+	else if (n == 0)
+		printf("%d is zero\n", n);
+	else if (n < 0)
+		printf("%d is negative\n", n);
 	return (0);
 }
