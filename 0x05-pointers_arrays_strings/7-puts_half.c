@@ -22,7 +22,7 @@ _putchar(str[n]);
 } else
 {
 for (n = ((l - 1) / 2) + 1;
-str[n] != '\0' ++n)
+str[n] != '\0'; ++n)
 _putchar(str[n]);
 }
 _putchar('\n');
